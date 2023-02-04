@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contener{
+    margin-left: auto;
+    margin-right:auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+@media (min-width: 768px) {
+    .contener {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .contener {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .contener {
+        width: 1170px;
+    }
+}
+.header {
+    padding: 10px;
+}
+.contener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links {
+    position: relative;
+}
+.header .links .icons {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icons span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links:hover .icons span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icons span:first-child{
+    width: 100%;
+}
+.header .links .icons span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+}
+.header .links .icons span:last-child{
+    width: 100%;
+}
+.header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header .links:hover ul{
+    display: block;
+}
+.header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f0f0f0 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+}
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: solid 1px #ddd;
+}
+
+.landing{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../photo/hd_wallpaper_3928.jpg);
+    background-size: 100% 100%;
+    height: calc(100vh - 79px);
+    border-top: solid 1px rgb(77, 69, 69);
+    
+}
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: #10cab7;
+
+}
+.landing .intro-text p {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.features{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.features .contener {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+/* bouuton of matreal */
+.features .feat a {
+    display: inline-block;
+    padding: 15px;
+    background-color: rgb(98, 132, 243);
+    color: white;
+    margin: 19px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 19px;
+    position: relative;
+}
+a:after,
+a:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: inherit;
+    transition: .5s;
+}
+a:after{
+    left: 0;
+    top: -5px;
+}
+a:before{
+    right: 0;
+    bottom: -5px;
+}
+a:hover:after,
+a:hover:before{
+    width:100%;
+}
+p{
+    color: #777;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+}
+/* mobil fone size */
+@media (max-width:700px) {
+    .features .contener {
+        display:inline-block
+    }
+}
+/* End the page 2 of study of matreal */
+/* start // form to login in system */
+.login-us{
+    height: 250px;
+    margin-top: 2px;
+    background-color: #F6F6F6;
+}
+.login-us .contener{
+    width: 300px;
+    color: white;
+    background-color: white;
+    padding: 25px 5px;
+    text-align: center;
+    height: 198px;
+    border-radius: 38px 0px;
+    border: solid 1px aqua;
+}
+@media (max-width:700px) {
+    input{
+        margin-left: 30px;
+    }
+}
+input{
+    color: #10cab7;
+    text-align: center;
+    padding: 4px 15px;
+    margin-top: 19px;
+    border: solid 2px black;
+    border-radius: 10px 0px;
+    font-size: 16px;
+    display: flex;
+    margin-left: 35px;
+    margin-top: 32px;
+}
+/* End // form to login in system */
+/* start // dev the wep site by mahmoud abdel aziz  */
+.infodev{
+    padding: 30px 0px;
+
+}
+.logo23{
+    width: 300px;
+    margin-left: 40%;
+}
+.imglogo{
+    width: 150px;
+    margin-left: 70px;
+}
+h3{
+    font-size: 20px;
+    color: #7D7777;
+    font-weight: 600;
+    margin-top: 5px;
+    padding: 10px;
+    margin: auto;
+}
+
+@media (max-width:700px) {
+    .logo23{
+        width: 300px;
+        margin-left: 10%;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: initial;
+        color: #7D7777;
+    }
+} 
+
+/* End   // dev the wep site by mahmoud abdel aziz  */
